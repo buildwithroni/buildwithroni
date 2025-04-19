@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Build with Roni - Full-Stack Web Developer Portfolio"/>
   <title>Build With Roni</title>
   <link rel="stylesheet" href="style.css"/>
-  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="icon" href="logo.png" type="image/png"/>
 </head>
 <body>
 
@@ -17,9 +16,13 @@
 
   <!-- Header -->
   <header>
-    <img src="logo.png" alt="Logo" class="logo" />
-    <h1>Build With Roni</h1>
-    <nav>
+    <div class="nav-left">
+      <img src="logo.png" alt="Logo" class="logo" />
+    </div>
+    <div class="nav-center">
+      <h1>Build With Roni</h1>
+    </div>
+    <div class="nav-right">
       <div class="menu-toggle" id="hamburger">&#9776;</div>
       <ul id="nav-links">
         <li><a href="#hero">Home</a></li>
@@ -31,30 +34,92 @@
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
+    </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero section" id="hero">
     <h1>BUILD WITH RONI</h1>
     <p>Full-Stack Web Developer | Frontend & Backend Expertise</p>
-    <!-- Typing text will be inserted here -->
   </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section class="about section" id="about">
     <h2>About Me</h2>
     <div class="about-content">
       <img src="roni.jpg" alt="Roni Halder" class="roni-photo"/>
       <p>
-        I'm Roni Halder, a full-stack web developer with a passion for building fast, responsive, and conversion-focused websites.
-        Background in project management, HR recruitment, warehouse ops, and client servicing.
-        Let’s build something impactful together.
+        I’m Roni Halder, a full-stack web developer with a passion for building fast, responsive, and conversion-focused websites. 
+        My journey began in project management and HR recruitment, evolved through logistics and client servicing, and now channels into creating business-impactful digital experiences.
       </p>
     </div>
   </section>
 
-  <!-- Add other sections like Services, Skills, etc. here... -->
+  <!-- Mission -->
+  <section class="section">
+    <h2>Mission</h2>
+    <p>
+      Empower entrepreneurs, creators, and businesses by building high-performing, visually striking websites that drive results — combining clean design with seamless functionality.
+    </p>
+  </section>
+
+  <!-- Vision -->
+  <section class="section">
+    <h2>Vision</h2>
+    <p>
+      To become a go-to digital partner for startups and brands across India and beyond, known for delivering stunning, scalable, and strategic web solutions with a personal touch.
+    </p>
+  </section>
+
+  <!-- Why Me -->
+  <section class="section">
+    <h2>Why Choose Me</h2>
+    <ul>
+      <li>Full-Stack Expertise – End-to-end frontend & backend solutions</li>
+      <li>Business-First Thinking – Experience from HR to logistics</li>
+      <li>Tailored & Affordable – Custom websites that suit your brand</li>
+      <li>No Code, No Problem – Easy-to-manage builds</li>
+      <li>Personal Support – Direct developer contact, no middleman</li>
+    </ul>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Custom Website Development</li>
+      <li>Full-Stack Web Solutions</li>
+      <li>E-Commerce Websites</li>
+      <li>No-Code / Low-Code Builds</li>
+      <li>Portfolio & Personal Branding Sites</li>
+      <li>Website Revamp & Optimization</li>
+    </ul>
+  </section>
+
+  <!-- Skills -->
+  <section class="section" id="skills">
+    <h2>Skills</h2>
+    <p>HTML, CSS, JavaScript, React, Node.js, Firebase, Git, SEO, Responsive Design, UI/UX Principles, Shopify, Webflow, Framer, WordPress</p>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="section" id="portfolio">
+    <h2>Portfolio</h2>
+    <p>Coming soon with stunning showcase of my best work.</p>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+    <p>Launching real-life solutions: client sites, tools, e-commerce builds, and more.</p>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" id="testimonials">
+    <h2>Testimonials</h2>
+    <p>"Roni delivered our website in record time and it looked amazing!" - A Happy Client</p>
+    <p>"Easy communication, professional results — highly recommend!" - Startup Founder</p>
+  </section>
 
   <!-- Contact -->
   <section class="contact section" id="contact">
@@ -68,10 +133,5 @@
   </section>
 
   <script src="script.js"></script>
-  <script>
-    window.addEventListener('load', () => {
-      document.querySelector('.loader-wrapper').style.display = 'none';
-    });
-  </script>
 </body>
 </html>
