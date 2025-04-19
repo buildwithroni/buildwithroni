@@ -1,11 +1,12 @@
-// Loader hide after page load
+// Wait for the window to load before hiding the loader
 window.addEventListener("load", () => {
-  const loader = document.getElementById("loader");
-  loader.style.display = "none";
+    const loader = document.getElementById("loader");
+    loader.style.opacity = "0"; // Fade out
+    setTimeout(() => loader.style.display = "none", 500); // Hide after animation
 });
 
-// Toggle Menu (mobile)
-function toggleMenu() {
-  const nav = document.getElementById("nav-links");
-  nav.classList.toggle("show");
-}
+// Optional: Add a fallback for slow loading
+setTimeout(() => {
+    const loader = document.getElementById("loader");
+    if (loader) loader.style.display = "none";
+}, 3000); // Hide after 3 seconds if not already hidden
