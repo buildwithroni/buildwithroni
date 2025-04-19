@@ -4,6 +4,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #222;
+    color: #f0f0f0;
 }
 
 header {
@@ -12,11 +14,16 @@ header {
     padding: 20px;
     background: #111;
     color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 header .logo {
     font-size: 24px;
     font-weight: bold;
+    color: #e50914; /* Brand color */
 }
 
 nav ul {
@@ -30,39 +37,26 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #fff;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+nav ul li a:hover {
+    color: #e50914; /* Brand color */
+}
+
+/* Section Styles */
 section {
-    padding: 50px 20px;
-    background-color: #f4f4f4;
+    padding: 80px 20px;
+    background-color: #333;
+    margin-top: 60px; /* To avoid overlap with header */
 }
 
 section h2 {
     text-align: center;
     margin-bottom: 20px;
-}
-
-/* Loader */
-#loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10000;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-}
-
-.loader-content {
-    color: white;
-    font-size: 24px;
+    color: #e50914;
 }
 
 /* About Me Section */
@@ -88,20 +82,53 @@ section h2 {
     flex-shrink: 0;
     width: 200px;
     height: 200px;
-    background-color: #ccc;
+    background-color: #444;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
     border-radius: 10px;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item:hover {
+    transform: scale(1.1);
 }
 
 /* Testimonials */
 .testimonial-item {
     margin-bottom: 20px;
     padding: 10px;
-    background-color: #ddd;
+    background-color: #444;
     border-radius: 10px;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-item:hover {
+    transform: translateX(10px);
+}
+
+/* Loader */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.loader-content {
+    color: white;
+    font-size: 24px;
 }
 
 /* Scroll to Top on Load */
@@ -113,4 +140,18 @@ html, body {
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+section {
+    animation: fadeIn 1s ease-in;
 }
