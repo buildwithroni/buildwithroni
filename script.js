@@ -1,37 +1,16 @@
-// Typing Effect
-const typingText = ["Full-Stack Web Developer", "Frontend + Backend", "Stunning Websites", "Brand Portfolios"];
-let textIndex = 0;
-let charIndex = 0;
-const typingElement = document.createElement("p");
-document.querySelector(".hero").appendChild(typingElement);
-
-function type() {
-  if (charIndex < typingText[textIndex].length) {
-    typingElement.textContent += typingText[textIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(type, 100);
-  } else {
-    setTimeout(erase, 1500);
-  }
-}
-
-function erase() {
-  if (charIndex > 0) {
-    typingElement.textContent = typingText[textIndex].substring(0, charIndex - 1);
-    charIndex--;
-    setTimeout(erase, 50);
-  } else {
-    textIndex = (textIndex + 1) % typingText.length;
-    setTimeout(type, 300);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  type();
+// Loader
+window.addEventListener("load", () => {
+  document.querySelector(".loader-wrapper").style.display = "none";
 });
 
-// Scroll Fade In Animation
-const observer = new IntersectionObserver(entries => {
+// Hamburger toggle
+document.querySelector(".hamburger").addEventListener("click", () => {
+  const menu = document.querySelector(".mobile-menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+});
+
+// Scroll animation
+const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
@@ -44,16 +23,22 @@ document.querySelectorAll(".section").forEach(section => {
   observer.observe(section);
 });
 
-// Smooth Scroll for Navigation
-document.querySelectorAll("nav ul li a").forEach(link => {
-  link.addEventListener("click", e => {
-    e.preventDefault();
-    const targetId = link.getAttribute("href").substring(1);
-    document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
-  });
-});
+// Optional typing effect (for your tagline)
+const typingText = [
+  "Based in India | Contact Now for a Free Custom Quote"
+];
+let lineIndex = 0;
+let charIndex = 0;
 
-// Loader Hide on Load
-window.addEventListener("load", () => {
-  document.querySelector(".loader-wrapper").style.display = "none";
-});
+function typeWriter() {
+  const tag = document.querySelector(".hero p:last-child");
+  if (!tag) return;
+
+  if (charIndex < typingText[lineIndex].length) {
+    tag.textContent += typingText[lineIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeWriter, 60);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", typeWriter);
