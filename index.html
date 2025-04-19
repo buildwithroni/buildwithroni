@@ -1,118 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Build With Roni</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Build with Roni - Full-Stack Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-    <!-- Loader Screen -->
-    <div id="loader">
-        <div class="loader-content">Loading...</div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
     </div>
 
-    <!-- Main Content -->
+    <!-- Header / Navigation Bar -->
     <header>
-        <div class="logo">Build With Roni</div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#mission">Mission</a></li>
-                <li><a href="#vision">Vision</a></li>
-                <li><a href="#whyme">Why Me</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="logo">
+            <img src="logo.png" alt="Build with Roni" />
+        </div>
+        <div class="nav">
+            <a href="#about">About Me</a>
+            <a href="#mission">Mission</a>
+            <a href="#vision">Vision</a>
+            <a href="#whyme">Why Me</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#projects">Projects</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </div>
     </header>
 
+    <!-- Sections -->
     <section id="about">
         <h2>About Me</h2>
-        <img src="roni.jpg" alt="Roni Halder">
-        <p>I am Roni Halder, a full-stack web developer with a passion for building fast, responsive, and conversion-focused websites. With my diverse background, I understand business needs inside-out and create websites that deliver real results.</p>
+        <img src="roni.jpg" alt="Roni Halder" />
+        <p>I am Roni Halder, a full-stack web developer with a passion for building fast, responsive, and conversion-focused websites. With experience in project management, HR recruitment, and client servicing, I understand the business needs and the technical requirements for a website to thrive in today’s digital world. I take pride in delivering stunning websites that drive results.</p>
     </section>
 
     <section id="mission">
         <h2>Mission</h2>
-        <p>Empower entrepreneurs, creators, and businesses by building high-performing, visually striking websites that drive results — combining clean design with seamless functionality.</p>
+        <p>My mission is to empower entrepreneurs, creators, and businesses by building high-performing, visually striking websites that drive results. By combining clean design with seamless functionality, I aim to create experiences that enhance business growth and brand presence.</p>
     </section>
 
     <section id="vision">
         <h2>Vision</h2>
-        <p>To become a go-to digital partner for startups and brands across India and beyond, known for delivering stunning, scalable, and strategic web solutions with a personal touch.</p>
+        <p>To become a go-to digital partner for startups and brands across India and beyond. I aim to deliver stunning, scalable, and strategic web solutions with a personal touch, making a lasting impact on each client’s digital journey.</p>
     </section>
 
     <section id="whyme">
         <h2>Why Me</h2>
-        <ul>
-            <li>Full-Stack Expertise</li>
-            <li>Business-First Thinking</li>
-            <li>Tailored & Affordable Solutions</li>
-            <li>No Code, No Problem</li>
-            <li>Personal Support</li>
-        </ul>
+        <p>Full-Stack Expertise – From frontend design to backend logic, handling everything end-to-end.<br>
+        Business-First Thinking – My background in HR, logistics, and project management allows me to understand your real business needs.<br>
+        Tailored & Affordable – Custom websites that fit your brand, goals, and budget.<br>
+        No Code, No Problem – Easy-to-manage sites with no-code/low-code options.<br>
+        Personal Support – Direct contact with the developer, ensuring personalized, dedicated service.</p>
     </section>
 
     <section id="services">
-        <h2>Our Services</h2>
+        <h2>Services</h2>
         <ul>
-            <li>Custom Website Development</li>
-            <li>Full-Stack Web Solutions</li>
-            <li>E-Commerce Websites</li>
-            <li>No-Code / Low-Code Builds</li>
-            <li>Portfolio & Personal Branding Sites</li>
-            <li>Website Revamp & Optimization</li>
+            <li>Custom Website Development – Tailored to your business needs.</li>
+            <li>Full-Stack Web Solutions – From frontend to backend, providing complete web experiences.</li>
+            <li>E-Commerce Websites – Online stores with secure checkout and smooth user experience.</li>
+            <li>No-Code / Low-Code Builds – Easy-to-edit, user-friendly sites.</li>
+            <li>Portfolio & Personal Branding Sites – Showcase your work and skills.</li>
+            <li>Website Revamp & Optimization – Improve your current website’s performance and design.</li>
         </ul>
     </section>
 
     <section id="skills">
         <h2>Skills</h2>
-        <p>HTML, CSS, JavaScript, React, Node.js, MongoDB, Express, Git, Agile methodologies</p>
+        <p>Expert in frontend and backend technologies including HTML, CSS, JavaScript, Node.js, React, and more. My skills also extend to web optimization, UI/UX design, and no-code platforms, ensuring that every website is both functional and visually appealing.</p>
     </section>
 
     <section id="portfolio">
         <h2>Portfolio</h2>
         <div class="carousel">
-            <div class="carousel-item">Project 1</div>
-            <div class="carousel-item">Project 2</div>
-            <div class="carousel-item">Project 3</div>
+            <div class="slide">
+                <img src="portfolio1.jpg" alt="Portfolio 1" />
+            </div>
+            <div class="slide">
+                <img src="portfolio2.jpg" alt="Portfolio 2" />
+            </div>
+            <!-- Add more slides here -->
         </div>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
-        <p>Here you can showcase the projects you've worked on. For example, personal websites, client work, etc.</p>
+        <p>Check out my past projects that highlight my skills in building responsive, high-performance websites. These projects range from e-commerce sites to portfolio sites for clients from various industries.</p>
     </section>
 
     <section id="testimonials">
         <h2>Testimonials</h2>
-        <div class="testimonial-item">
-            <p>"Roni did an amazing job on my website!"</p>
-            <strong>Client 1</strong>
+        <div class="testimonial">
+            <img src="ixora.jpg" alt="Ixora Flowers Client" />
+            <p>"Build with Roni created an amazing website for our flower shop. The design is modern, clean, and functional. Our online sales have increased significantly since the launch." – Ixora Flowers</p>
         </div>
-        <div class="testimonial-item">
-            <p>"Incredible work! Highly recommended."</p>
-            <strong>Client 2</strong>
-        </div>
-        <div class="testimonial-item">
-            <p>"Ixora Flowers is delighted with the website that Roni developed for us. It reflects the essence of our brand and has significantly boosted our online presence. Highly recommended!"</p>
-            <strong>Ixora Flowers</strong>
-        </div>
+        <!-- Add more testimonials as needed -->
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: hungamahood@gmail.com</p>
+        <form>
+            <!-- Add form fields here -->
+        </form>
     </section>
 
-    <script src="script.js"></script>
 </body>
-
 </html>
