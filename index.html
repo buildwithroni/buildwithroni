@@ -1,90 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Build With Roni</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="icon" href="logo.png" type="image/png"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <!-- Loader -->
-  <div class="loader-wrapper">
-    <div class="loader"></div>
-  </div>
+  <div id="loader" class="loader">Loading...</div>
 
-  <!-- Header -->
+  <!-- Navbar -->
   <header>
-    <div class="nav-left">
+    <div class="nav-container">
       <img src="logo.png" alt="Logo" class="logo" />
+      <div class="brand-title">Build With Roni</div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
     </div>
-    <div class="nav-center">
-      <h1>Build With Roni</h1>
-    </div>
-    <div class="nav-right">
-      <div class="menu-toggle" id="hamburger">&#9776;</div>
-      <ul id="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+    <nav id="nav-links">
+      <a href="#about">About</a>
+      <a href="#mission">Mission</a>
+      <a href="#vision">Vision</a>
+      <a href="#whyus">Why Us</a>
+      <a href="#services">Services</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#projects">Projects</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="hero section" id="hero">
-    <h1>BUILD WITH RONI</h1>
-    <p>Full-Stack Web Developer | Frontend & Backend Expertise</p>
-  </section>
-
-  <!-- About -->
-  <section class="about section" id="about">
+  <!-- Sections -->
+  <section id="about" class="section">
     <h2>About Me</h2>
     <div class="about-content">
-      <img src="roni.jpg" alt="Roni Halder" class="roni-photo"/>
-      <p>
-        I’m Roni Halder, a full-stack web developer with a passion for building fast, responsive, and conversion-focused websites. 
-        My journey began in project management and HR recruitment, evolved through logistics and client servicing, and now channels into creating business-impactful digital experiences.
-      </p>
+      <img src="roni.jpg" alt="Roni" class="roni-img" />
+      <p>Roni Halder, a full-stack web developer with a passion for building fast, responsive, and conversion-focused websites...</p>
     </div>
   </section>
 
-  <!-- Mission -->
-  <section class="section">
+  <section id="mission" class="section">
     <h2>Mission</h2>
-    <p>
-      Empower entrepreneurs, creators, and businesses by building high-performing, visually striking websites that drive results — combining clean design with seamless functionality.
-    </p>
+    <p>Empower entrepreneurs by building high-performing, visually striking websites that drive results...</p>
   </section>
 
-  <!-- Vision -->
-  <section class="section">
+  <section id="vision" class="section">
     <h2>Vision</h2>
-    <p>
-      To become a go-to digital partner for startups and brands across India and beyond, known for delivering stunning, scalable, and strategic web solutions with a personal touch.
-    </p>
+    <p>To become a go-to digital partner for startups and brands across India and beyond...</p>
   </section>
 
-  <!-- Why Me -->
-  <section class="section">
-    <h2>Why Choose Me</h2>
+  <section id="whyus" class="section">
+    <h2>Why Me</h2>
     <ul>
-      <li>Full-Stack Expertise – End-to-end frontend & backend solutions</li>
-      <li>Business-First Thinking – Experience from HR to logistics</li>
-      <li>Tailored & Affordable – Custom websites that suit your brand</li>
-      <li>No Code, No Problem – Easy-to-manage builds</li>
-      <li>Personal Support – Direct developer contact, no middleman</li>
+      <li>Full-Stack Expertise</li>
+      <li>Business-First Thinking</li>
+      <li>Tailored & Affordable</li>
+      <li>No Code, No Problem</li>
+      <li>Personal Support</li>
     </ul>
   </section>
 
-  <!-- Services -->
-  <section class="section" id="services">
+  <section id="services" class="section">
     <h2>Services</h2>
     <ul>
       <li>Custom Website Development</li>
@@ -96,40 +73,41 @@
     </ul>
   </section>
 
-  <!-- Skills -->
-  <section class="section" id="skills">
+  <section id="skills" class="section">
     <h2>Skills</h2>
-    <p>HTML, CSS, JavaScript, React, Node.js, Firebase, Git, SEO, Responsive Design, UI/UX Principles, Shopify, Webflow, Framer, WordPress</p>
+    <p>HTML, CSS, JavaScript, React, Node.js, WordPress, Shopify, SEO, Git, UI/UX Design</p>
   </section>
 
-  <!-- Portfolio -->
-  <section class="section" id="portfolio">
+  <section id="portfolio" class="section carousel">
     <h2>Portfolio</h2>
-    <p>Coming soon with stunning showcase of my best work.</p>
+    <div class="carousel-track" id="portfolio-track">
+      <div class="carousel-item">Site 1</div>
+      <div class="carousel-item">Site 2</div>
+      <div class="carousel-item">Site 3</div>
+    </div>
   </section>
 
-  <!-- Projects -->
-  <section class="section" id="projects">
+  <section id="projects" class="section carousel">
     <h2>Projects</h2>
-    <p>Launching real-life solutions: client sites, tools, e-commerce builds, and more.</p>
+    <div class="carousel-track" id="projects-track">
+      <div class="carousel-item">Project A</div>
+      <div class="carousel-item">Project B</div>
+      <div class="carousel-item">Project C</div>
+    </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="section" id="testimonials">
+  <section id="testimonials" class="section carousel">
     <h2>Testimonials</h2>
-    <p>"Roni delivered our website in record time and it looked amazing!" - A Happy Client</p>
-    <p>"Easy communication, professional results — highly recommend!" - Startup Founder</p>
+    <div class="carousel-track" id="testimonials-track">
+      <div class="carousel-item">"Great work!"</div>
+      <div class="carousel-item">"Roni is amazing!"</div>
+      <div class="carousel-item">"Highly recommend!"</div>
+    </div>
   </section>
 
-  <!-- Contact -->
-  <section class="contact section" id="contact">
-    <h2>Contact Me</h2>
-    <form action="https://wa.me/91XXXXXXXXXX" target="_blank">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send via WhatsApp</button>
-    </form>
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: buildwithroni@gmail.com | Instagram: @buildwithroni</p>
   </section>
 
   <script src="script.js"></script>
