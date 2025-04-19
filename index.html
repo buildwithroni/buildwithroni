@@ -1,230 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Build With Roni</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    body {
-      background-color: #0d0d0d;
-      color: white;
-      overflow-x: hidden;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      background-color: #121212;
-      box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3);
-    }
-
-    .logo {
-      font-weight: bold;
-      color: red;
-      font-size: 20px;
-    }
-
-    .brand-name {
-      font-size: 24px;
-      color: white;
-      font-weight: 600;
-    }
-
-    .hamburger {
-      font-size: 24px;
-      color: white;
-      cursor: pointer;
-    }
-
-    nav {
-      display: none;
-      flex-direction: column;
-      background-color: #1a1a1a;
-    }
-
-    nav a {
-      color: white;
-      padding: 10px 20px;
-      border-top: 1px solid #333;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      background-color: red;
-    }
-
-    .section {
-      padding: 60px 20px;
-      margin: 20px;
-      background: #1c1c1c;
-      border-radius: 20px;
-      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
-      transform: translateX(100%);
-      opacity: 0;
-      transition: all 0.8s ease-out;
-    }
-
-    .section.visible {
-      transform: translateX(0);
-      opacity: 1;
-    }
-
-    .skills-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .skill-card {
-      padding: 20px;
-      background: #2b2b2b;
-      border-radius: 15px;
-      box-shadow: 0 0 10px transparent;
-      transition: box-shadow 0.3s ease;
-      width: 150px;
-      text-align: center;
-    }
-
-    .skill-card:hover {
-      box-shadow: 0 0 15px red;
-    }
-
-    .carousel {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      gap: 20px;
-    }
-
-    .carousel-item {
-      scroll-snap-align: start;
-      min-width: 250px;
-      background: #2a2a2a;
-      padding: 20px;
-      border-radius: 15px;
-    }
-
-    .about-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .about-section img {
-      width: 120px;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    @media (min-width: 768px) {
-      nav {
-        display: flex !important;
-        flex-direction: row;
-        gap: 20px;
-        background: none;
-      }
-      .hamburger {
-        display: none;
-      }
-      .about-section {
-        flex-direction: row;
-        align-items: flex-start;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Build With Roni - Full-Stack Web Developer in India | Expert in frontend, backend, and stunning web solutions">
+  <meta name="keywords" content="Full-Stack Developer, Web Development India, Roni Halder, Frontend Backend Developer, Business Website, Portfolio, E-commerce Sites, SEO Friendly">
+  <meta name="author" content="Roni Halder">
+  <title>Build With Roni | Full-Stack Web Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <div class="logo">R</div>
-    <div class="brand-name">Build With Roni</div>
-    <div class="hamburger" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
-    </div>
-    <nav id="navbar">
-      <a href="#portfolio">Portfolio</a>
-      <a href="#projects">Projects</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#skills">Skills</a>
-    </nav>
+  <header class="site-header">
+    <div class="logo"> <img src="logo.png" alt="Build With Roni Logo"> </div>
+    <div class="title">Build With Roni</div>
+    <div class="menu-toggle" id="hamburger"><i class="fas fa-bars"></i></div>
   </header>
 
-  <section class="section about-section visible" id="about">
-    <img src="roni.jpg" alt="Roni Halder" />
-    <div>
-      <h2>About Me</h2>
-      <p>Roni Halder, a full-stack web developer with a passion for building fast, responsive, and conversion-focused websites. I combine design and functionality to create business-ready sites that convert. Let’s build something awesome!</p>
+  <nav class="mobile-nav" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h1>BUILD WITH RONI</h1>
+    <p>Full-Stack Web Developer | Frontend & Backend Expertise</p>
+    <p>Transforming ideas into stunning, high-converting websites that grow your brand and business.</p>
+    <p>Based in India | <a href="https://wa.me/916297549389" target="_blank">Contact Now for a Free Custom Quote</a></p>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="roni.jpg" alt="Roni Halder" class="profile-img">
+      <p>I'm Roni Halder, a full-stack web developer with a passion for building fast, responsive, and conversion-focused websites. With a background in project management, HR recruitment, warehouse operations, and client servicing, I bring a unique blend of technical and organizational expertise to every project...</p>
     </div>
   </section>
 
-  <section class="section" id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="carousel">
-      <div class="carousel-item">Project 1</div>
-      <div class="carousel-item">Project 2</div>
-      <div class="carousel-item">Project 3</div>
+  <section class="mission-vision">
+    <div class="box">
+      <h3>Mission</h3>
+      <p>To empower entrepreneurs, creators, and businesses by building high-performing, visually striking websites...</p>
+    </div>
+    <div class="box">
+      <h3>Vision</h3>
+      <p>To become a go-to digital partner for startups and brands across India and beyond...</p>
     </div>
   </section>
 
-  <section class="section" id="projects">
+  <section class="why-me">
+    <h2>Why Me</h2>
+    <ul>
+      <li><i class="fas fa-code"></i> Full-Stack Expertise</li>
+      <li><i class="fas fa-business-time"></i> Business-First Thinking</li>
+      <li><i class="fas fa-wallet"></i> Tailored & Affordable</li>
+      <li><i class="fas fa-gears"></i> No Code, No Problem</li>
+      <li><i class="fas fa-user"></i> Personal Support</li>
+    </ul>
+  </section>
+
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Custom Website Development</li>
+      <li>Full-Stack Web Solutions</li>
+      <li>E-Commerce Websites</li>
+      <li>No-Code / Low-Code Builds</li>
+      <li>Portfolio & Personal Branding Sites</li>
+      <li>Website Revamp & Optimization</li>
+    </ul>
+  </section>
+
+  <section class="carousel" id="projects">
     <h2>Projects</h2>
-    <div class="carousel">
-      <div class="carousel-item">E-commerce Store</div>
-      <div class="carousel-item">Portfolio Site</div>
-      <div class="carousel-item">Business Website</div>
+    <div class="slider">
+      <img src="project1.jpg" alt="Project 1">
+      <img src="project2.jpg" alt="Project 2">
+      <img src="project3.jpg" alt="Project 3">
     </div>
   </section>
 
-  <section class="section" id="testimonials">
+  <section class="carousel" id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="slider">
+      <img src="portfolio1.jpg" alt="Portfolio 1">
+      <img src="portfolio2.jpg" alt="Portfolio 2">
+      <img src="portfolio3.jpg" alt="Portfolio 3">
+    </div>
+  </section>
+
+  <section class="carousel" id="testimonials">
     <h2>Testimonials</h2>
-    <div class="carousel">
-      <div class="carousel-item">"Roni is amazing to work with!"</div>
-      <div class="carousel-item">"Highly recommended for startups."</div>
-      <div class="carousel-item">"Beautiful design & fast delivery."</div>
+    <div class="slider">
+      <img src="testimonial1.jpg" alt="Testimonial 1">
+      <img src="testimonial2.jpg" alt="Testimonial 2">
+      <img src="testimonial3.jpg" alt="Testimonial 3">
     </div>
   </section>
 
-  <section class="section" id="skills">
-    <h2>Skills</h2>
-    <div class="skills-container">
-      <div class="skill-card">HTML</div>
-      <div class="skill-card">CSS</div>
-      <div class="skill-card">JavaScript</div>
-      <div class="skill-card">WordPress</div>
-      <div class="skill-card">Shopify</div>
-      <div class="skill-card">React</div>
-    </div>
+  <section class="reach">
+    <h2>How to Reach?</h2>
+    <p><i class="fab fa-instagram"></i> <a href="https://instagram.com/buildwithroni">@buildwithroni</a> | <a href="https://instagram.com/roni.halder_in">@roni.halder_in</a></p>
+    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/916297549389">+91-6297549389</a></p>
+    <p><i class="fas fa-envelope"></i> buildwithroni@gmail.com</p>
   </section>
 
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('navbar');
-      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-    }
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://wa.me/916297549389" method="get" onsubmit="return sendToWhatsApp(event)">
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+      <select id="service" name="service">
+        <option value="Website Development">Custom Website Development</option>
+        <option value="Full-Stack Solutions">Full-Stack Web Solutions</option>
+        <option value="E-Commerce">E-Commerce Websites</option>
+        <option value="No-Code">No-Code / Low-Code Builds</option>
+        <option value="Portfolio">Portfolio & Branding Sites</option>
+        <option value="Revamp">Website Revamp & Optimization</option>
+      </select>
+      <input type="text" id="location" name="location" placeholder="Your Location" required>
+      <input type="tel" id="phone" name="phone" placeholder="Contact number" required>
+      <button type="submit">Send via WhatsApp</button>
+    </form>
+  </section>
 
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
+  <footer>
+    <p>&copy; 2025 All Rights Reserved | Build With Roni</p>
+    <p>Made with <i class="fas fa-heart"></i> in India</p>
+  </footer>
 
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
