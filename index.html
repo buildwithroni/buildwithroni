@@ -3,33 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Build With Roni</title>
+  <title>Build with Roni</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="header">
-    <img src="roni-logo.jpg" alt="Logo" class="logo" />
-    <h1 class="brand-name">BUILD WITH RONI</h1>
-    <div class="menu-icon">☰</div>
+    <img src="roni.jpg" alt="Logo" class="logo" />
+    <h1 class="site-title">BUILD WITH RONI</h1>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
   </header>
 
   <section class="hero">
     <h2>Full-Stack Web Developer | Frontend + Backend Expertise</h2>
-    <p>Transforming ideas into stunning, high-converting websites that grow your brand and business.</p>
-    <p>Based in India | Contact Now for a Free Custom Quote</p>
+    <p>Transforming ideas into stunning, high-converting websites that grow your brand and business.<br>Based in India | Contact Now for a Free Custom Quote</p>
   </section>
 
   <section class="about">
-    <img src="roni.jpg" alt="Roni Halder" class="passport-img" />
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>I'm Roni Halder, a full-stack web developer with a passion for building fast, responsive, and conversion-focused websites...</p>
-    </div>
+    <img src="roni.jpg" alt="Roni Halder" class="profile-pic" />
+    <h2>About Me</h2>
+    <p>I'm Roni Halder, a full-stack web developer with a passion for building fast, responsive, and conversion-focused websites...</p>
+    <a href="https://www.instagram.com/buildwithroni" class="instagram-link" target="_blank">Follow on Instagram</a>
   </section>
 
   <section class="mission-vision">
-    <div><h3>Mission</h3><p>To empower entrepreneurs by building high-performing, visually striking websites...</p></div>
-    <div><h3>Vision</h3><p>To become a go-to digital partner for startups across India and beyond...</p></div>
+    <div>
+      <h3>Mission</h3>
+      <p>To empower entrepreneurs by building high-performing, visually striking websites...</p>
+    </div>
+    <div>
+      <h3>Vision</h3>
+      <p>To become a go-to digital partner for startups across India and beyond...</p>
+    </div>
   </section>
 
   <section class="why-me">
@@ -55,15 +59,48 @@
     </ul>
   </section>
 
-  <section class="carousel-section">
+  <section class="portfolio">
     <h2>Portfolio</h2>
-    <div class="carousel" id="portfolio-carousel">
-      <div class="slide">Project 1</div>
-      <div class="slide">Project 2</div>
-      <div class="slide">Project 3</div>
+    <div class="slider">
+      <img src="ai_project1.png" alt="AI Project 1" />
+      <img src="ai_project2.png" alt="AI Project 2" />
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>React, Node.js</li>
+      <li>Firebase, MongoDB</li>
+      <li>WordPress, Shopify</li>
+      <li>Project Management</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send via WhatsApp</button>
+    </form>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.body.classList.toggle('menu-open');
+    }
+
+    function sendMessage(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      const whatsappMessage = `Hi, I am ${name}, Email: ${email}, Message: ${message}`;
+      window.open(`https://wa.me/916297549389?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+    }
+  </script>
 </body>
 </html>
