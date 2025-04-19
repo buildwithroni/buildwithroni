@@ -126,5 +126,33 @@
       window.open(whatsappURL, '_blank');
     });
   </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle("fade-in", entry.isIntersecting);
+      });
+    });
+
+    document.querySelectorAll("section").forEach(section => {
+      section.classList.add("hidden");
+      observer.observe(section);
+    });
+  });
+</script>
+
+<style>
+  .hidden {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.5s ease-out;
+  }
+
+  .fade-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+</style>
+  
 </body>
 </html>
