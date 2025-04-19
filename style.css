@@ -1,70 +1,119 @@
-body {
-  background-color: #000;
-  color: #fff;
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-}
+<!-- Link this CSS in your HTML -->
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: black;
+    color: white;
+  }
 
-section {
-  padding: 40px 20px;
-  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
-  margin-bottom: 30px;
-  border-radius: 12px;
-}
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: black;
+    border-bottom: 1px solid red;
+  }
 
-h2 {
-  color: #ff1a1a;
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
+  .logo {
+    height: 60px;
+  }
 
-.slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 15px;
-  padding: 10px;
-}
+  .brand-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+  }
 
-.slider::-webkit-scrollbar {
-  display: none;
-}
+  .hamburger {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
 
-.slider img {
-  height: 220px;
-  width: auto;
-  border-radius: 12px;
-  scroll-snap-align: center;
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-  transition: transform 0.3s ease-in-out;
-}
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    right: 10px;
+    top: 70px;
+    z-index: 99;
+  }
 
-.slider img:hover {
-  transform: scale(1.05);
-}
+  .menu a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid red;
+  }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 15px;
-  justify-items: center;
-  margin-top: 20px;
-}
+  .show-menu {
+    display: flex;
+  }
 
-.skill-card {
-  background: #111;
-  color: #fff;
-  padding: 20px;
-  border-radius: 15px;
-  text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
-  cursor: pointer;
-}
+  section {
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+  }
 
-.skill-card:hover {
-  background: #ff1a1a;
-  transform: translateY(-5px);
-}
+  section h2 {
+    color: red;
+    text-align: center;
+  }
+
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-behavior: smooth;
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-item {
+    min-width: 250px;
+    background: #111;
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+  }
+
+  .carousel-item img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .about-img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px auto;
+    display: block;
+  }
+
+  footer {
+    padding: 10px;
+    background: #111;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+  }
+
+  @media (min-width: 768px) {
+    .brand-text {
+      font-size: 26px;
+    }
+    .carousel-item {
+      min-width: 300px;
+    }
+  }
+</style>
+
+<!-- Add this JS to control the hamburger menu -->
