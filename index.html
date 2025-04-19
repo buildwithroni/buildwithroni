@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Build With Roni</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
+
 <body>
   <!-- Loader -->
   <div class="loader-wrapper">
@@ -16,62 +18,59 @@
 
   <!-- Header -->
   <header>
-    <div class="logo"><img src="logo.png" alt="Logo"></div>
+    <div class="logo">
+      <img src="logo.png" alt="Logo" />
+    </div>
     <h1>Build With Roni</h1>
-    <div class="hamburger">&#9776;</div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
   </header>
-  <nav class="mobile-menu">
+
+  <!-- Navigation Menu -->
+  <nav id="mobile-menu" class="mobile-nav hidden">
     <ul>
       <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <!-- Hero -->
+  <section class="hero section">
     <h1>BUILD WITH RONI</h1>
     <p>Full-Stack Web Developer | Frontend & Backend Expertise</p>
     <p>Transforming ideas into stunning, high-converting websites that grow your brand and business.</p>
     <p>Based in India | Contact Now for a Free Custom Quote</p>
   </section>
 
-  <!-- About Section -->
-  <section class="section" id="about">
+  <!-- About -->
+  <section id="about" class="section">
     <h2>About Me</h2>
     <p>I'm Roni Halder, a full-stack web developer with a passion for building fast, responsive, and conversion-focused websites...</p>
-    <img src="roni.jpg" alt="Roni Halder" class="roni-photo">
+    <img src="roni.jpg" alt="Roni" class="roni-photo" />
   </section>
 
-  <!-- Mission Section -->
-  <section class="section" id="mission">
+  <!-- Mission, Vision, Why Us -->
+  <section class="section">
     <h2>Mission</h2>
-    <p>To empower entrepreneurs, creators, and businesses by building high-performing, visually striking websites...</p>
-  </section>
-
-  <!-- Vision Section -->
-  <section class="section" id="vision">
+    <p>To empower entrepreneurs, creators, and businesses...</p>
     <h2>Vision</h2>
-    <p>To become a go-to digital partner for startups and brands across India and beyond...</p>
-  </section>
-
-  <!-- Why Us Section -->
-  <section class="section" id="why">
-    <h2>Why Me</h2>
+    <p>To become a go-to digital partner for startups and brands...</p>
+    <h2>Why Us</h2>
     <ul>
-      <li>Full-Stack Expertise</li>
-      <li>Business-First Thinking</li>
-      <li>Tailored & Affordable</li>
-      <li>No Code, No Problem</li>
-      <li>Personal Support</li>
+      <li>Full-Stack Expertise – From frontend to backend...</li>
+      <li>Business-First Thinking – I understand real business needs...</li>
+      <li>Tailored & Affordable – Custom websites to fit your brand and budget...</li>
+      <li>No Code, No Problem – I offer no-code/low-code options too...</li>
+      <li>Personal Support – You talk directly to me...</li>
     </ul>
   </section>
 
-  <!-- Services Section -->
-  <section class="section" id="services">
+  <!-- Services -->
+  <section id="services" class="section">
     <h2>Our Services</h2>
     <ul>
       <li>Custom Website Development</li>
@@ -83,29 +82,28 @@
     </ul>
   </section>
 
-  <!-- Portfolio Section -->
-  <section class="section carousel" id="portfolio">
+  <!-- Portfolio -->
+  <section id="portfolio" class="section carousel">
     <h2>Portfolio</h2>
-    <div class="portfolio-item">...</div>
-    <div class="portfolio-item">...</div>
+    <div class="carousel-track">
+      <div class="portfolio-item"><img src="project1.jpg" alt="Project 1"></div>
+      <div class="portfolio-item"><img src="project2.jpg" alt="Project 2"></div>
+      <div class="portfolio-item"><img src="project3.jpg" alt="Project 3"></div>
+    </div>
   </section>
 
-  <!-- Projects Section -->
-  <section class="section carousel" id="projects">
+  <!-- Projects -->
+  <section id="projects" class="section carousel">
     <h2>Projects</h2>
-    <div class="project">...</div>
-    <div class="project">...</div>
+    <div class="carousel-track">
+      <div class="project"><p>Project A details...</p></div>
+      <div class="project"><p>Project B details...</p></div>
+      <div class="project"><p>Project C details...</p></div>
+    </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section class="section carousel" id="testimonials">
-    <h2>Testimonials</h2>
-    <div class="testimonial">...</div>
-    <div class="testimonial">...</div>
-  </section>
-
-  <!-- Skills Section -->
-  <section class="section" id="skills">
+  <!-- Skills -->
+  <section id="skills" class="section">
     <h2>Skills</h2>
     <ul class="skills">
       <li>HTML</li>
@@ -114,23 +112,42 @@
       <li>React</li>
       <li>Node.js</li>
       <li>Express</li>
+      <li>MongoDB</li>
     </ul>
   </section>
 
-  <!-- Contact Section -->
-  <section class="section" id="contact">
+  <!-- Testimonials -->
+  <section id="testimonials" class="section carousel">
+    <h2>Testimonials</h2>
+    <div class="carousel-track">
+      <div class="testimonial">
+        <img src="user1.jpg" alt="User 1">
+        <p>"Roni built us a great site!"</p>
+        <span>- Client 1</span>
+      </div>
+      <div class="testimonial">
+        <img src="user2.jpg" alt="User 2">
+        <p>"Excellent work and support."</p>
+        <span>- Client 2</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
     <h2>Contact</h2>
     <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <input type="text" placeholder="Your Message" required>
-      <button type="submit">Send</button>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="text" placeholder="Your Message" required />
+      <button type="submit">Send Message</button>
     </form>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Build With Roni. All rights reserved.</p>
+    &copy; 2025 Build With Roni. All rights reserved.
   </footer>
 </body>
+
 </html>
