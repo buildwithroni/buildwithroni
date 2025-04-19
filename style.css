@@ -1,119 +1,192 @@
-<!-- Link this CSS in your HTML -->
-<style>
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: black;
-    color: white;
-  }
+/* style.css */
 
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background: black;
-    border-bottom: 1px solid red;
-  }
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .logo {
-    height: 60px;
-  }
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
 
-  .brand-text {
-    font-size: 22px;
-    font-weight: bold;
-    color: red;
-    text-align: center;
-  }
+section {
+  padding: 60px 20px;
+  position: relative;
+}
 
-  .hamburger {
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-  }
+h2.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #f00;
+  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+}
 
-  .menu {
-    display: none;
-    flex-direction: column;
-    background: #111;
-    position: absolute;
-    right: 10px;
-    top: 70px;
-    z-index: 99;
-  }
+/* Header */
+.header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid #f00;
+}
 
-  .menu a {
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    border-bottom: 1px solid red;
-  }
+.logo {
+  font-size: 1.5rem;
+  color: #f00;
+  font-weight: bold;
+}
 
-  .show-menu {
-    display: flex;
-  }
+.hero {
+  background: linear-gradient(to right, #111, #222);
+  text-align: center;
+  padding: 100px 20px;
+}
 
-  section {
-    padding: 30px 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
-  }
+.hero h1 {
+  font-size: 3rem;
+  color: #f00;
+}
 
-  section h2 {
-    color: red;
-    text-align: center;
-  }
+.hero p {
+  font-size: 1.2rem;
+  margin: 20px auto;
+  max-width: 600px;
+}
 
-  .carousel {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    scroll-behavior: smooth;
-  }
+.hero span {
+  display: block;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #aaa;
+}
 
-  .carousel::-webkit-scrollbar {
-    display: none;
-  }
+/* About */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .carousel-item {
-    min-width: 250px;
-    background: #111;
-    border-radius: 16px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
-  }
+.about img {
+  width: 140px;
+  height: 180px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.5);
+}
 
-  .carousel-item img {
-    width: 100%;
-    border-radius: 12px;
-  }
+.about p {
+  max-width: 800px;
+  font-size: 1rem;
+  color: #eee;
+  text-align: justify;
+}
 
-  .about-img {
-    width: 100px;
-    height: auto;
-    border-radius: 8px;
-    margin: 10px auto;
-    display: block;
-  }
+/* Icons & Info Boxes */
+.info-box {
+  background: #111;
+  border: 1px solid #f00;
+  padding: 30px;
+  margin: 10px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
 
-  footer {
-    padding: 10px;
-    background: #111;
-    text-align: center;
-    font-size: 14px;
-    color: #aaa;
-  }
+.info-box:hover {
+  transform: translateY(-10px);
+}
 
-  @media (min-width: 768px) {
-    .brand-text {
-      font-size: 26px;
-    }
-    .carousel-item {
-      min-width: 300px;
-    }
-  }
-</style>
+.info-box i {
+  font-size: 2rem;
+  color: #f00;
+  margin-bottom: 15px;
+  display: block;
+}
 
-<!-- Add this JS to control the hamburger menu -->
+/* Carousel */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  min-width: 300px;
+  margin-right: 20px;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+
+.carousel-item img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form select {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #f00;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #c00;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #fff;
+  font-size: 0.9rem;
+  border-top: 1px solid #f00;
+}
+
+footer span {
+  color: #f00;
+}
