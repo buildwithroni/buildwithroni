@@ -22,7 +22,7 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-// Section Fade-in on Scroll
+// Section Fade-in
 const sections = document.querySelectorAll('.section');
 
 const observer = new IntersectionObserver(entries => {
