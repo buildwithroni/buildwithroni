@@ -4,155 +4,227 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Build With Roni</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #121212;
+      box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3);
+    }
+
+    .logo {
+      font-weight: bold;
+      color: red;
+      font-size: 20px;
+    }
+
+    .brand-name {
+      font-size: 24px;
+      color: white;
+      font-weight: 600;
+    }
+
+    .hamburger {
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      background-color: #1a1a1a;
+    }
+
+    nav a {
+      color: white;
+      padding: 10px 20px;
+      border-top: 1px solid #333;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: red;
+    }
+
+    .section {
+      padding: 60px 20px;
+      margin: 20px;
+      background: #1c1c1c;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+      transform: translateX(100%);
+      opacity: 0;
+      transition: all 0.8s ease-out;
+    }
+
+    .section.visible {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .skill-card {
+      padding: 20px;
+      background: #2b2b2b;
+      border-radius: 15px;
+      box-shadow: 0 0 10px transparent;
+      transition: box-shadow 0.3s ease;
+      width: 150px;
+      text-align: center;
+    }
+
+    .skill-card:hover {
+      box-shadow: 0 0 15px red;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+    }
+
+    .carousel-item {
+      scroll-snap-align: start;
+      min-width: 250px;
+      background: #2a2a2a;
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .about-section img {
+      width: 120px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+      nav {
+        display: flex !important;
+        flex-direction: row;
+        gap: 20px;
+        background: none;
+      }
+      .hamburger {
+        display: none;
+      }
+      .about-section {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="nav">
-      <div class="logo"> <img src="roni.jpg" alt="Logo" /></div>
-      <div class="brand">BUILD WITH RONI</div>
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="logo">R</div>
+    <div class="brand-name">Build With Roni</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
     </div>
-    <nav id="mobileMenu">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
+    <nav id="navbar">
       <a href="#portfolio">Portfolio</a>
+      <a href="#projects">Projects</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Full-Stack Web Developer | Frontend + Backend Expertise</h1>
-    <p>Transforming ideas into stunning, high-converting websites that grow your brand and business.<br />Based in India | Contact Now for a Free Custom Quote</p>
+  <section class="section about-section visible" id="about">
+    <img src="roni.jpg" alt="Roni Halder" />
+    <div>
+      <h2>About Me</h2>
+      <p>Roni Halder, a full-stack web developer with a passion for building fast, responsive, and conversion-focused websites. I combine design and functionality to create business-ready sites that convert. Let’s build something awesome!</p>
+    </div>
   </section>
 
-  <section id="about">
-    <img src="roni.jpg" class="profile-img" alt="Roni Halder" />
-    <h2>About Me</h2>
-    <p>I'm Roni Halder, a full-stack web developer with a passion for building fast, responsive, and conversion-focused websites...</p>
-    <a href="https://instagram.com/buildwithroni" target="_blank">Follow on Instagram</a>
-  </section>
-
-  <section id="mission">
-    <h3>Mission</h3>
-    <p>To empower entrepreneurs by building high-performing, visually striking websites...</p>
-    <h3>Vision</h3>
-    <p>To become a go-to digital partner for startups across India and beyond…</p>
-  </section>
-
-  <section id="why">
-    <h2>Why Me</h2>
-    <ul>
-      <li>Full-Stack Expertise – Frontend to backend handled end-to-end.</li>
-      <li>Business-First Thinking – Experience in HR, logistics, and PM.</li>
-      <li>Tailored & Affordable – Built to fit your goals.</li>
-      <li>No Code, No Problem – Easy-to-manage sites too.</li>
-      <li>Personal Support – You talk directly to me.</li>
-    </ul>
-  </section>
-
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Custom Website Development</li>
-      <li>Full-Stack Web Solutions</li>
-      <li>E-Commerce Websites</li>
-      <li>No-Code / Low-Code Builds</li>
-      <li>Portfolio & Branding Sites</li>
-      <li>Website Revamp & Optimization</li>
-    </ul>
-  </section>
-
-  <section id="portfolio">
+  <section class="section" id="portfolio">
     <h2>Portfolio</h2>
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="1000194194.jpg" alt="AI Project 1"></div>
-        <div class="swiper-slide"><img src="1000194233.jpg" alt="AI Project 2"></div>
-        <div class="swiper-slide"><img src="roni.jpg" alt="AI Project 3"></div>
-      </div>
+    <div class="carousel">
+      <div class="carousel-item">Project 1</div>
+      <div class="carousel-item">Project 2</div>
+      <div class="carousel-item">Project 3</div>
     </div>
   </section>
 
-  <section id="skills">
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+    <div class="carousel">
+      <div class="carousel-item">E-commerce Store</div>
+      <div class="carousel-item">Portfolio Site</div>
+      <div class="carousel-item">Business Website</div>
+    </div>
+  </section>
+
+  <section class="section" id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="carousel">
+      <div class="carousel-item">"Roni is amazing to work with!"</div>
+      <div class="carousel-item">"Highly recommended for startups."</div>
+      <div class="carousel-item">"Beautiful design & fast delivery."</div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
     <h2>Skills</h2>
-    <div class="skill-grid">
-      <div class="skill-card">HTML5</div>
-      <div class="skill-card">CSS3</div>
+    <div class="skills-container">
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
       <div class="skill-card">JavaScript</div>
-      <div class="skill-card">React.js</div>
-      <div class="skill-card highlight">Node.js</div>
-      <div class="skill-card">Express.js</div>
-      <div class="skill-card">MongoDB</div>
-      <div class="skill-card">Python</div>
-      <div class="skill-card">Java</div>
+      <div class="skill-card">WordPress</div>
+      <div class="skill-card">Shopify</div>
+      <div class="skill-card">React</div>
     </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send via WhatsApp</button>
-    </form>
   </section>
 
   <script>
     function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      const nav = document.getElementById('navbar');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
     }
 
-    new Swiper('.swiper', {
-      slidesPerView: 1,
-      loop: true,
-      autoplay: {
-        delay: 2000,
-      },
-    });
-
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const name = this[0].value;
-      const email = this[1].value;
-      const message = this[2].value;
-      const whatsappURL = `https://wa.me/916297549389?text=Hi Roni! My name is ${name}. My email is ${email}. Message: ${message}`;
-      window.open(whatsappURL, '_blank');
-    });
-  </script>
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll('.section');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        entry.target.classList.toggle("fade-in", entry.isIntersecting);
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
       });
-    });
+    }, { threshold: 0.1 });
 
-    document.querySelectorAll("section").forEach(section => {
-      section.classList.add("hidden");
+    sections.forEach(section => {
       observer.observe(section);
     });
-  });
-</script>
-
-<style>
-  .hidden {
-    opacity: 0;
-    transform: translateX(20px);
-    transition: all 0.5s ease-out;
-  }
-
-  .fade-in {
-    opacity: 1;
-    transform: translateX(0);
-  }
-</style>
-  
+  </script>
 </body>
 </html>
