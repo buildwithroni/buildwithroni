@@ -8,86 +8,86 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif; /* Premium font */
-  line-height: 1.7;
-  background-color: #181818; /* Deeper dark background */
-  color: #e0e0e0; /* Soft white text */
+  font-family: 'Times New Roman', serif, 'Arial', sans-serif; /* Specified fonts */
+  line-height: 1.6;
+  background-color: #f4f4f4; /* Light background */
+  color: #333; /* Dark text */
   overflow-x: hidden;
 }
 
 section {
-  padding: 80px 20px; /* Increased padding */
+  padding: 60px 20px;
   position: relative;
 }
 
 h2.section-title {
-  font-size: 3rem; /* Even larger title */
+  font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 60px;
-  color: #ff6666; /* Softer red */
-  text-shadow: 1px 1px 2px rgba(255, 102, 102, 0.6);
+  margin-bottom: 40px;
+  color: #007bff; /* Light blue accent */
 }
 
 /* Header */
 .site-header {
-  background-color: rgba(24, 24, 24, 0.95); /* More opaque dark header */
-  color: #fff;
+  background-color: #fff;
+  color: #333;
   padding: 15px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed; /* Sticky header */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  border-bottom: 1px solid #ff6666;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .site-header .logo {
-  border: 1px solid #ff6666; /* Red outline for logo */
-  padding: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for logo */
+  border: 1px solid #007bff; /* Light blue outline for logo */
+  padding: 3px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .site-header .logo img {
-  height: 40px;
-  display: block; /* Ensure no extra space */
+  height: 35px;
+  display: block;
 }
 
 .site-header .title {
-  font-size: 1.8rem;
-  color: #ff6666;
-  font-weight: 600;
-  margin-left: 20px;
+  font-size: 1.6rem;
+  color: #007bff;
+  font-weight: bold;
+  margin-left: 15px;
 }
 
 .mobile-nav {
   display: none;
-  position: fixed; /* Fixed for full viewport coverage */
+  position: fixed;
   top: 0;
-  right: -300px; /* Start off-screen */
-  width: 300px;
+  right: -250px;
+  width: 250px;
   height: 100%;
-  background-color: rgba(24, 24, 24, 0.98);
-  padding-top: 60px; /* Account for header */
+  background-color: #fff;
+  padding-top: 60px;
   z-index: 1001;
-  transition: right 0.3s ease-in-out; /* Right to left animation */
+  transition: right 0.3s ease-in-out;
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-nav.active {
-  right: 0; /* Slide in */
+  right: 0;
 }
 
 .mobile-nav a {
   display: block;
-  color: #e0e0e0;
+  color: #333;
   text-decoration: none;
-  padding: 15px 20px;
-  font-size: 1.1rem;
+  padding: 12px 20px;
+  font-size: 1rem;
   transition: color 0.3s ease;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #eee;
 }
 
 .mobile-nav a:last-child {
@@ -95,12 +95,12 @@ h2.section-title {
 }
 
 .mobile-nav a:hover {
-  color: #ff6666;
+  color: #007bff;
 }
 
 .menu-toggle {
-  font-size: 1.8rem;
-  color: #fff;
+  font-size: 1.5rem;
+  color: #333;
   cursor: pointer;
   background: none;
   border: none;
@@ -119,46 +119,45 @@ h2.section-title {
   }
   .site-header .title {
     margin-left: auto;
-    margin-right: 20px;
+    margin-right: 15px;
   }
 }
 
 /* Hero */
 .hero {
-  background: linear-gradient(to right, #222, #333);
+  background: linear-gradient(to right, #e9ecef, #f8f9fa); /* Light gradient */
   text-align: center;
-  padding: 150px 20px;
+  padding: 100px 20px;
 }
 
 .hero h1 {
-  font-size: 4rem;
-  color: #ff6666;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 3px rgba(255, 102, 102, 0.7);
+  font-size: 2.8rem;
+  color: #007bff;
+  margin-bottom: 15px;
 }
 
 .hero p {
-  font-size: 1.3rem;
-  margin: 30px auto;
-  max-width: 800px;
-  color: #ccc;
-  line-height: 1.8;
+  font-size: 1rem;
+  margin: 20px auto;
+  max-width: 700px;
+  color: #555;
+  line-height: 1.7;
 }
 
 .hero a {
   display: inline-block;
-  background-color: #ff6666;
+  background-color: #007bff;
   color: #fff;
-  padding: 15px 30px;
+  padding: 12px 24px;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 5px;
   font-weight: 500;
   transition: background-color 0.3s ease;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .hero a:hover {
-  background-color: #e64a4a;
+  background-color: #0056b3;
 }
 
 /* About */
@@ -172,25 +171,26 @@ h2.section-title {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
-  max-width: 900px;
+  gap: 30px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 30px 20px;
 }
 
 .about .profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 120px; /* Passport size width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 0; /* No rounded corners for passport style */
   object-fit: cover;
-  box-shadow: 0 6px 12px rgba(255, 102, 102, 0.4);
+  border: 2px solid #ddd; /* Border for the photo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .about p {
-  font-size: 1.1rem;
-  color: #ccc;
+  font-size: 0.9rem;
+  color: #555;
   text-align: center;
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 @media (min-width: 768px) {
@@ -200,8 +200,7 @@ h2.section-title {
     text-align: left;
   }
   .about .profile-img {
-    width: 200px;
-    height: 200px;
+    width: 150px; /* Slightly larger on desktop */
   }
   .about p {
     flex: 1;
@@ -212,209 +211,210 @@ h2.section-title {
 .mission-vision {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  padding: 60px 20px;
-  background-color: #222;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: #f8f9fa; /* Light background */
 }
 
 .info-box {
-  background: #333;
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 6px 12px rgba(255, 102, 102, 0.2);
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   text-align: center;
-  max-width: 400px;
+  max-width: 350px;
   flex: 1;
 }
 
 .info-box:hover {
-  transform: translateY(-8px);
+  transform: translateY(-5px);
 }
 
 .info-box img {
-  height: 60px;
-  margin-bottom: 15px;
+  height: 40px;
+  margin-bottom: 10px;
 }
 
 .info-box h3 {
-  color: #ff6666;
-  margin-bottom: 15px;
-  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
 }
 
 .info-box p {
-  color: #ccc;
-  font-size: 1rem;
-  line-height: 1.7;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 /* Why Me */
 .why-me {
-  background-color: #181818;
-  padding: 80px 20px;
+  background-color: #e9ecef; /* Light background */
+  padding: 60px 20px;
 }
 
 .why-me ul {
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
-  margin: 30px auto 0;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  max-width: 900px;
+  margin: 20px auto 0;
 }
 
 .why-me ul li {
-  background-color: #333;
-  padding: 30px;
-  border-radius: 10px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
-  gap: 20px;
-  box-shadow: 0 4px 8px rgba(255, 102, 102, 0.15);
+  gap: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .why-me ul li i {
-  font-size: 2rem;
-  color: #ff6666;
-  min-width: 30px; /* Ensure icon takes up space */
+  font-size: 1.2rem;
+  color: #007bff;
+  min-width: 25px;
   text-align: center;
 }
 
 .why-me ul li span {
-  color: #ccc;
-  line-height: 1.7;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 /* Services */
 .services {
-  background-color: #222;
-  padding: 80px 20px;
+  background-color: #f8f9fa; /* Light background */
+  padding: 60px 20px;
 }
 
 .services ul {
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
-  margin: 30px auto 0;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  max-width: 900px;
+  margin: 20px auto 0;
 }
 
 .services ul li {
-  background-color: #333;
-  padding: 30px;
-  border-radius: 10px;
-  font-size: 1.1rem;
-  color: #ccc;
-  line-height: 1.7;
-  box-shadow: 0 4px 8px rgba(255, 102, 102, 0.15);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .services ul li span {
   font-weight: bold;
-  color: #ff6666;
-  margin-right: 10px;
+  color: #007bff;
+  margin-right: 5px;
 }
 
 /* Carousel Sections (Projects, Portfolio, Testimonials) */
 .carousel-section {
-  padding: 80px 20px;
-  background-color: #181818;
+  padding: 60px 20px;
+  background-color: #e9ecef; /* Light background */
 }
 
 .carousel {
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
-  padding-bottom: 20px; /* To accommodate potential scrollbar */
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 15px;
 }
 
 .carousel.auto-scroll .slider {
   display: flex;
-  animation: scrollSlider 20s linear infinite; /* Adjust duration as needed */
+  animation: scrollSlider 25s linear infinite; /* Adjust speed */
 }
 
 @keyframes scrollSlider {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); } /* Scroll full width */
+  100% { transform: translateX(-100%); }
 }
 
 .carousel .slider {
   display: flex;
-  gap: 30px;
-  padding: 30px 0;
+  gap: 15px;
+  padding: 15px 0;
 }
 
 .carousel .slider img {
-  min-width: 400px; /* Increased min-width for better visuals */
+  min-width: 280px;
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Testimonials Carousel Specific Styling */
 .carousel .slider .testimonial-item {
-  min-width: 450px;
-  background-color: #333;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(255, 102, 102, 0.15);
+  min-width: 320px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .carousel .slider .testimonial-item p {
   font-style: italic;
-  color: #ddd;
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-  line-height: 1.8;
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .carousel .slider .testimonial-item cite {
   display: block;
   text-align: right;
-  color: #aaa;
-  font-size: 0.9rem;
+  color: #777;
+  font-size: 0.8rem;
 }
 
 /* Skills Section */
 .skills {
-  background-color: #222;
-  padding: 80px 20px;
+  background-color: #f8f9fa; /* Light background */
+  padding: 60px 20px;
 }
 
 .skills-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 12px;
   justify-content: center;
-  max-width: 1100px;
-  margin: 30px auto 0;
+  max-width: 950px;
+  margin: 20px auto 0;
 }
 
 .skill-box {
-  background-color: #333;
-  color: #ccc;
-  border-radius: 25px;
-  padding: 18px 25px;
-  font-size: 1.1rem;
+  background-color: #fff;
+  color: #444;
+  border-radius: 20px;
+  padding: 12px 18px;
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
-  gap: 12px;
-  box-shadow: 0 4px 8px rgba(255, 102, 102, 0.15);
+  gap: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .skill-box i {
-  font-size: 1.3rem;
-  color: #ff6666;
+  font-size: 1rem;
+  color: #007bff;
 }
 
 .skill-box.clicked {
-  background-color: #ff6666;
+  background-color: #007bff;
   color: #fff;
 }
 
@@ -424,49 +424,49 @@ h2.section-title {
 
 /* Reach */
 .reach {
-  background-color: #181818;
-  padding: 80px 20px;
+  background-color: #e9ecef; /* Light background */
+  padding: 60px 20px;
   text-align: center;
 }
 
 .reach p {
-  color: #ccc;
-  font-size: 1.1rem;
-  margin-bottom: 15px;
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
 }
 
 .reach a {
-  color: #ff6666;
+  color: #007bff;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .reach a:hover {
-  color: #e64a4a;
+  color: #0056b3;
 }
 
 .reach i {
-  margin-right: 10px;
-  font-size: 1.3rem;
+  margin-right: 8px;
+  font-size: 1rem;
 }
 
 /* Contact Section */
 .contact {
-  background-color: #222;
-  padding: 80px 20px;
+  background-color: #f8f9fa; /* Light background */
+  padding: 60px 20px;
 }
 
 .contact-form {
-  max-width: 600px;
+  max-width: 550px;
   margin: 30px auto 0;
-  padding: 40px;
-  background-color: #333;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
 }
 
 .contact-form .form-group {
@@ -475,49 +475,50 @@ h2.section-title {
 }
 
 .contact-form label {
-  color: #ccc;
-  margin-bottom: 8px;
+  color: #444;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
 .contact-form input,
 .contact-form select {
-  padding: 15px;
-  border-radius: 8px;
-  border: none;
-  background: #444;
-  color: #e0e0e0;
-  font-size: 1rem;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  background: #f8f9fa;
+  color: #333;
+  font-size: 0.9rem;
   outline: none;
 }
 
 .contact-form button {
-  padding: 18px 30px;
-  background: #ff6666;
+  padding: 12px 20px;
+  background: #007bff;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   color: #fff;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   transition: background 0.3s ease;
-  font-size: 1.1rem;
+  font-size: 1rem;
   outline: none;
 }
 
 .contact-form button:hover {
-  background: #e64a4a;
+  background: #0056b3;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 40px 20px;
-  background: #000;
-  color: #aaa;
-  font-size: 0.9rem;
-  border-top: 1px solid #ff6666;
+  padding: 30px 20px;
+  background: #333;
+  color: #eee;
+  font-size: 0.8rem;
+  border-top: 1px solid #555;
 }
 
 footer span {
-  color: #ff6666;
+  color: #007bff;
 }
