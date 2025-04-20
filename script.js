@@ -1,14 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById("hamburger");
   const mobileMenu = document.getElementById("mobileMenu");
+  const navLinks = document.querySelectorAll('.mobile-nav a');
   const skillBoxes = document.querySelectorAll('.skill-box');
-  const carousels = document.querySelectorAll('.carousel.auto-scroll');
+  const carousels = document.querySelectorAll('.carousel');
   const sections = document.querySelectorAll('.reveal');
 
   // Toggle mobile menu
   if (menuToggle && mobileMenu) {
     menuToggle.addEventListener("click", function () {
       mobileMenu.classList.toggle("active");
+    });
+
+    // Close mobile menu on nav link click
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+      });
     });
 
     // Close mobile menu on outside click
@@ -41,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // WhatsApp Redirect (Corrected to use form submission)
+  // WhatsApp Redirect
   const contactForm = document.querySelector(".contact form");
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
@@ -71,34 +79,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Auto-scroll for carousels
-  carousels.forEach(carousel => {
-    let scrollAmount = 0;
-    const slider = carousel.querySelector('.slider');
-    if (slider) {
-      const scrollInterval = setInterval(() => {
-        scrollAmount += 2; // Adjust scroll speed here
-        carousel.scrollLeft = scrollAmount;
-        if (scrollAmount >= slider.scrollWidth - carousel.offsetWidth) {
-          scrollAmount = 0; // Reset scroll
-        }
-      }, 50); // Adjust interval for speed
-    }
-  });
-
-  // Scroll reveal animation
+  // Scroll reveal animation (Slower)
   function revealSection() {
     sections.forEach(section => {
       const top = section.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
-      const revealPoint = 150;
+      const revealPoint = 100; // Adjust for when the reveal happens
 
       if (top < windowHeight - revealPoint) {
         section.classList.add('reveal');
+      } else {
+        section.classList.remove('reveal'); // Allows for re-revealing on scroll up
       }
     });
   }
 
   window.addEventListener('scroll', revealSection);
-  revealSection(); // Initial call to reveal sections in viewport
+  revealSection(); // Initial call
+
+  // Basic responsiveness for aspect ratio (more complex solutions might require libraries or more detailed JS)
+  function adjustLayout() {
+    const aspectRatio = window.innerWidth / window.innerHeight;
+    // You can add more specific adjustments based on different aspect ratio ranges if needed.
+    // For example:
+    // if (aspectRatio < 0.9) { // Portrait mode
+    //   document.body.classList.add('portrait');
+    //   document.body.classList.remove('landscape');
+    // } else { // Landscape mode
+    //   document.body.classList.add('landscape');
+    //   document.body.classList.remove('portrait');
+    // }
+  }
+
+  window.addEventListener('resize', adjustLayout);
+  adjustLayout(); // Initial call
 });
