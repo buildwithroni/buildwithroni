@@ -1,3 +1,4 @@
+
 /* style.css */
 
 /* Reset & Base Styles */
@@ -20,7 +21,7 @@ section {
   position: relative;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out; /* Slower reveal */
 }
 
 .reveal {
@@ -33,7 +34,7 @@ h2.section-title {
   text-align: center;
   margin-bottom: 40px;
   color: #fff;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid red; /* Red accent */
   padding-bottom: 10px;
 }
 
@@ -51,13 +52,13 @@ h2.section-title {
   width: 100%;
   z-index: 1000;
   border-bottom: 1px solid #333;
-  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
 
 .site-header .logo {
-  border: 1px solid #fff; /* White outline for logo */
+  border: 1px solid red; /* Red outline for logo */
   padding: 3px;
-  box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+  box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.1);
 }
 
 .site-header .logo img {
@@ -67,7 +68,7 @@ h2.section-title {
 
 .site-header .title {
   font-size: 1.6rem;
-  color: #fff;
+  color: red; /* Red title */
   font-weight: bold;
   margin-left: 15px;
 }
@@ -79,11 +80,11 @@ h2.section-title {
   right: -250px;
   width: 250px;
   height: 100%;
-  background-color: #222; /* Darker background for contrast */
+  background-color: #222;
   padding-top: 60px;
   z-index: 1001;
   transition: right 0.3s ease-in-out;
-  box-shadow: -2px 0px 5px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+  box-shadow: -2px 0px 5px rgba(255, 255, 255, 0.1);
 }
 
 .mobile-nav.active {
@@ -105,7 +106,7 @@ h2.section-title {
 }
 
 .mobile-nav a:hover {
-  color: #fff;
+  color: red; /* Red hover */
 }
 
 .menu-toggle {
@@ -135,14 +136,14 @@ h2.section-title {
 
 /* Hero */
 .hero {
-  background: linear-gradient(to right, #111, #333); /* Darker gradient */
+  background: linear-gradient(to right, #111, #333);
   text-align: center;
   padding: 100px 20px;
 }
 
 .hero h1 {
   font-size: 2.8rem;
-  color: #fff;
+  color: red; /* Red heading */
   margin-bottom: 15px;
 }
 
@@ -156,8 +157,8 @@ h2.section-title {
 
 .hero a {
   display: inline-block;
-  background-color: #fff;
-  color: #000;
+  background-color: red; /* Red button */
+  color: #fff;
   padding: 12px 24px;
   text-decoration: none;
   border-radius: 5px;
@@ -167,8 +168,7 @@ h2.section-title {
 }
 
 .hero a:hover {
-  background-color: #ddd;
-  color: #000;
+  background-color: #cc0000; /* Darker red hover */
 }
 
 /* About */
@@ -176,7 +176,7 @@ h2.section-title {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #111; /* Dark background */
+  background-color: #111;
 }
 
 .about .about-content {
@@ -190,12 +190,12 @@ h2.section-title {
 }
 
 .about .profile-img {
-  width: 120px; /* Passport size width */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 0; /* No rounded corners for passport style */
+  width: 120px;
+  height: auto;
+  border-radius: 0;
   object-fit: cover;
-  border: 2px solid #eee; /* White border for the photo */
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+  border: 2px solid red; /* Red border */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
 .about p {
@@ -212,7 +212,7 @@ h2.section-title {
     text-align: left;
   }
   .about .profile-img {
-    width: 150px; /* Slightly larger on desktop */
+    width: 150px;
   }
   .about p {
     flex: 1;
@@ -225,14 +225,14 @@ h2.section-title {
   justify-content: center;
   gap: 20px;
   padding: 40px 20px;
-  background-color: #222; /* Dark background */
+  background-color: #222;
 }
 
 .info-box {
   background: #333;
   border-radius: 5px;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease;
   text-align: center;
   max-width: 350px;
@@ -246,11 +246,10 @@ h2.section-title {
 .info-box img {
   height: 40px;
   margin-bottom: 10px;
-  filter: grayscale(100%); /* Ensure icons are black and white */
 }
 
 .info-box h3 {
-  color: #fff;
+  color: red; /* Red heading */
   margin-bottom: 10px;
   font-size: 1.3rem;
 }
@@ -263,7 +262,7 @@ h2.section-title {
 
 /* Why Me */
 .why-me {
-  background-color: #111; /* Dark background */
+  background-color: #111;
   padding: 60px 20px;
 }
 
@@ -278,18 +277,18 @@ h2.section-title {
 }
 
 .why-me ul li {
-  background-color: #222; /* Darker list items */
+  background-color: #222;
   padding: 15px;
   border-radius: 5px;
   display: flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
 .why-me ul li i {
   font-size: 1.2rem;
-  color: #fff;
+  color: red; /* Red icon */
   min-width: 25px;
   text-align: center;
 }
@@ -302,7 +301,7 @@ h2.section-title {
 
 /* Services */
 .services {
-  background-color: #222; /* Dark background */
+  background-color: #222;
   padding: 60px 20px;
 }
 
@@ -317,24 +316,24 @@ h2.section-title {
 }
 
 .services ul li {
-  background-color: #333; /* Darker list items */
+  background-color: #333;
   padding: 20px;
   border-radius: 5px;
   font-size: 0.9rem;
   color: #eee;
   line-height: 1.6;
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
 .services ul li span {
   font-weight: bold;
-  color: #fff;
+  color: red; /* Red number/indicator */
   margin-right: 5px;
 }
 
 /* Our Working Model */
 .working-model {
-  background-color: #111; /* Dark background */
+  background-color: #111;
   padding: 60px 20px;
 }
 
@@ -348,15 +347,15 @@ h2.section-title {
 }
 
 .working-model .step {
-  background-color: #222; /* Darker step boxes */
+  background-color: #222;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
 .working-model .icon {
   font-size: 2rem;
-  color: #fff;
+  color: red; /* Red icon */
   margin-bottom: 10px;
 }
 
@@ -374,23 +373,13 @@ h2.section-title {
 /* Carousel Sections (Projects, Portfolio, Testimonials) */
 .carousel-section {
   padding: 60px 20px;
-  background-color: #222; /* Dark background */
+  background-color: #222;
 }
 
 .carousel {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 15px;
-}
-
-.carousel.auto-scroll .slider {
-  display: flex;
-  animation: scrollSlider 25s linear infinite; /* Adjust speed */
-}
-
-@keyframes scrollSlider {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
 }
 
 .carousel .slider {
@@ -404,17 +393,16 @@ h2.section-title {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
-  filter: grayscale(100%); /* Black and white images */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
 /* Projects Specific Styling */
 .project-item {
   min-width: 300px;
-  background-color: #333; /* Dark project boxes */
+  background-color: #333;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
   text-align: center;
 }
 
@@ -423,11 +411,10 @@ h2.section-title {
   height: auto;
   border-radius: 5px;
   margin-bottom: 10px;
-  filter: grayscale(100%); /* Black and white images */
 }
 
 .project-item h3 {
-  color: #fff;
+  color: red; /* Red heading */
   font-size: 1.1rem;
   margin-bottom: 5px;
 }
@@ -441,10 +428,10 @@ h2.section-title {
 /* Testimonials Carousel Specific Styling */
 .carousel .slider .testimonial-item {
   min-width: 320px;
-  background-color: #333; /* Dark testimonial boxes */
+  background-color: #333;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
 .carousel .slider .testimonial-item p {
@@ -464,7 +451,7 @@ h2.section-title {
 
 /* Skills Section */
 .skills {
-  background-color: #111; /* Dark background */
+  background-color: #111;
   padding: 60px 20px;
 }
 
@@ -478,7 +465,7 @@ h2.section-title {
 }
 
 .skill-box {
-  background-color: #222; /* Dark skill boxes */
+  background-color: #222;
   color: #eee;
   border-radius: 20px;
   padding: 12px 18px;
@@ -486,32 +473,27 @@ h2.section-title {
   display: flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .skill-box i {
   font-size: 1rem;
-  color: #fff;
+  color: red; /* Red icon */
 }
 
 .skill-box.clicked {
-  background-color: #fff;
-  color: #000;
+  background-color: red; /* Red clicked state */
+  color: #fff;
 }
 
 .skill-box.clicked i {
-  color: #000;
+  color: #fff;
 }
-
-/* style.css */
-
-/* ... previous CSS ... */
-
 /* Reach */
 .reach {
-  background-color: #222; /* Dark background */
+  background-color: #222;
   padding: 60px 20px;
   text-align: center;
 }
@@ -523,14 +505,14 @@ h2.section-title {
 }
 
 .reach a {
-  color: #fff;
+  color: red; /* Red link */
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .reach a:hover {
-  color: #ddd;
+  color: #ff4d4d; /* Lighter red hover */
 }
 
 .reach i {
@@ -540,7 +522,7 @@ h2.section-title {
 
 /* Contact Section */
 .contact {
-  background-color: #333; /* Dark background */
+  background-color: #333;
   padding: 60px 20px;
 }
 
@@ -548,9 +530,9 @@ h2.section-title {
   max-width: 550px;
   margin: 30px auto 0;
   padding: 30px;
-  background-color: #222; /* Darker form background */
+  background-color: #222;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -581,10 +563,10 @@ h2.section-title {
 
 .contact-form button {
   padding: 12px 20px;
-  background: #fff;
+  background: red; /* Red button */
   border: none;
   border-radius: 5px;
-  color: #000;
+  color: #fff;
   font-weight: 500;
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
@@ -593,8 +575,7 @@ h2.section-title {
 }
 
 .contact-form button:hover {
-  background: #ddd;
-  color: #000;
+  background: #cc0000; /* Darker red hover */
 }
 
 /* Footer */
@@ -608,5 +589,49 @@ footer {
 }
 
 footer span {
-  color: #fff;
+  color: red; /* Red accent */
 }
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .about .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .mission-vision {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-box {
+    max-width: 100%;
+  }
+  .why-me ul {
+    grid-template-columns: 1fr;
+  }
+  .services ul {
+    grid-template-columns: 1fr;
+  }
+  .working-model-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  .carousel .slider {
+    width: 100%; /* Ensure full width for mobile */
+  }
+  .project-item {
+    min-width: 100%;
+  }
+  .carousel .slider img,
+  .project-item img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Adjustments for different aspect ratios can be complex and often involve JavaScript for more dynamic control. However, the above media query ensures a basic level of responsiveness for smaller screens. For more fine-grained control based on aspect ratio, you might consider using JavaScript to detect the screen dimensions and apply specific styles. */
+  
