@@ -1,4 +1,3 @@
-
 /* style.css */
 
 /* Reset & Base Styles */
@@ -143,7 +142,7 @@ h2.section-title {
 
 .hero h1 {
   font-size: 2.8rem;
-  color: red; /* Red heading */
+  color: red;
   margin-bottom: 15px;
 }
 
@@ -155,20 +154,30 @@ h2.section-title {
   line-height: 1.7;
 }
 
-.hero a {
+.hero p a#contactButton { /* Target the specific link */
   display: inline-block;
-  background-color: red; /* Red button */
+  background-color: red;
   color: #fff;
   padding: 12px 24px;
   text-decoration: none;
   border-radius: 5px;
   font-weight: 500;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   margin-top: 15px;
+  animation: shake 0.5s infinite alternate 2s; /* Initial delay of 2 seconds */
 }
 
-.hero a:hover {
-  background-color: #cc0000; /* Darker red hover */
+.hero p a#contactButton:hover {
+  background-color: #cc0000;
+  transform: scale(1.05); /* Slight scale on hover */
+  animation-play-state: paused; /* Stop shaking on hover */
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
 }
 
 /* About */
@@ -491,6 +500,7 @@ h2.section-title {
 .skill-box.clicked i {
   color: #fff;
 }
+
 /* Reach */
 .reach {
   background-color: #222;
@@ -536,11 +546,13 @@ h2.section-title {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center; /* Center align form elements */
 }
 
 .contact-form .form-group {
   display: flex;
   flex-direction: column;
+  width: 100%; /* Ensure full width for centering to work properly */
 }
 
 .contact-form label {
@@ -548,6 +560,7 @@ h2.section-title {
   margin-bottom: 5px;
   font-size: 0.9rem;
   font-weight: 500;
+  text-align: left; /* Align labels to the left for better readability */
 }
 
 .contact-form input,
@@ -559,6 +572,7 @@ h2.section-title {
   color: #eee;
   font-size: 0.9rem;
   outline: none;
+  width: 100%; /* Ensure input fields take full width */
 }
 
 .contact-form button {
@@ -572,6 +586,8 @@ h2.section-title {
   transition: background 0.3s ease, color 0.3s ease;
   font-size: 1rem;
   outline: none;
+  width: fit-content; /* Make button fit content */
+  margin: 10px auto 0; /* Center the button */
 }
 
 .contact-form button:hover {
@@ -631,7 +647,9 @@ footer span {
     width: 100%;
     height: auto;
   }
+  .contact-form {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
 }
 
 /* Adjustments for different aspect ratios can be complex and often involve JavaScript for more dynamic control. However, the above media query ensures a basic level of responsiveness for smaller screens. For more fine-grained control based on aspect ratio, you might consider using JavaScript to detect the screen dimensions and apply specific styles. */
-  
