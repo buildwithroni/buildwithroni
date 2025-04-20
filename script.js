@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById("hamburger");
   const mobileMenu = document.getElementById("mobileMenu");
   const skillBoxes = document.querySelectorAll('.skill-box');
+  const carousels = document.querySelectorAll('.carousel.auto-scroll');
 
   // Toggle mobile menu
   if (menuToggle && mobileMenu) {
@@ -49,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const location = locationInput ? locationInput.value : '';
       const phone = phoneInput ? phoneInput.value : '';
 
-      const message = `Hello Roni, I am ${name} from ${location}. I am interested in your ${service} service. Please contact me on ${phone}.`;
+      const message = `Enquiry from website:\nName: ${name}\nService: ${service}\nLocation: ${location}\nContact: ${phone}`;
       const whatsappUrl = `https://wa.me/916297549389?text=${encodeURIComponent(message)}`;
 
       window.open(whatsappUrl, "_blank");
@@ -61,5 +62,20 @@ document.addEventListener("DOMContentLoaded", function () {
     box.addEventListener('click', function() {
       this.classList.toggle('clicked');
     });
+  });
+
+  // Auto-scroll for carousels
+  carousels.forEach(carousel => {
+    let scrollAmount = 0;
+    const slider = carousel.querySelector('.slider');
+    if (slider) {
+      const scrollInterval = setInterval(() => {
+        scrollAmount += 2; // Adjust scroll speed here
+        carousel.scrollLeft = scrollAmount;
+        if (scrollAmount >= slider.scrollWidth - carousel.offsetWidth) {
+          scrollAmount = 0; // Reset scroll
+        }
+      }, 50); // Adjust interval for speed
+    }
   });
 });
