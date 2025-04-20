@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&family=Arial&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="site-header">
@@ -42,7 +42,8 @@
     <h2 class="section-title">About Me</h2>
     <div class="about-content">
       <img src="roni.jpg" alt="Roni Halder" class="profile-img">
-      <p>I'm Roni Halder, a full-stack web developer with a passion for building fast, responsive, and conversion-focused websites. With a background in project management, HR recruitment, warehouse operations, and client servicing, I bring a unique blend of technical and organizational expertise to every project. My journey from leading recruitment teams to managing last-mile logistics has shaped my ability to understand businesses inside-out. Today, I channel that experience into crafting websites that not only look stunning but also deliver real business results. Let’s connect and build something impactful — your brand deserves it.</p>
+      <p>I'm Roni Halder, a full-stack web developer with a passion for building fast, responsive, and conversion-focused websites. With a background in project management, HR recruitment, warehouse operations, and client servicing, I bring a unique blend of technical and organizational expertise to every project. My journey from leading recruitment teams to managing last-mile logistics has shaped my ability to understand businesses inside-out. Today, I channel that experience into crafting websites that not only look stunning but also deliver real business results.</p>
+      <p>Let’s connect and build something impactful — your brand deserves it.</p>
     </div>
   </section>
 
@@ -130,4 +131,66 @@
       <div class="skill-box" data-skill="HTML"><i class="fab fa-html5"></i> HTML</div>
       <div class="skill-box" data-skill="CSS"><i class="fab fa-css3-alt"></i> CSS</div>
       <div class="skill-box" data-skill="JavaScript"><i class="fab fa-js"></i> JavaScript</div>
-      
+      <div class="skill-box" data-skill="React"><i class="fab fa-react"></i> React</div>
+      <div class="skill-box" data-skill="Node.js"><i class="fab fa-node-js"></i> Node.js</div>
+      <div class="skill-box" data-skill="Express.js"><i class="fas fa-server"></i> Express.js</div>
+      <div class="skill-box" data-skill="MongoDB"><i class="fas fa-database"></i> MongoDB</div>
+      <div class="skill-box" data-skill="Git"><i class="fab fa-github"></i> Git</div>
+      <div class="skill-box" data-skill="Responsive Design"><i class="fas fa-mobile-alt"></i> Responsive Design</div>
+      <div class="skill-box" data-skill="UI/UX Design"><i class="fas fa-palette"></i> UI/UX Design</div>
+      <div class="skill-box" data-skill="Figma"><i class="fab fa-figma"></i> Figma</div>
+      <div class="skill-box" data-skill="WordPress"><i class="fab fa-wordpress"></i> WordPress</div>
+      <div class="skill-box" data-skill="SEO"><i class="fas fa-search"></i> SEO</div>
+      <div class="skill-box" data-skill="Problem Solving"><i class="fas fa-puzzle-piece"></i> Problem Solving</div>
+      <div class="skill-box" data-skill="Communication"><i class="fas fa-comments"></i> Communication</div>
+    </div>
+  </section>
+
+  <section class="reach">
+    <h2 class="section-title">How to Reach Me?</h2>
+    <p><i class="fab fa-instagram"></i> <a href="https://instagram.com/buildwithroni" target="_blank">@buildwithroni</a></p>
+    <p><i class="fab fa-instagram"></i> <a href="https://instagram.com/roni.halder_in" target="_blank">@roni.halder_in</a></p>
+    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/916297549389" target="_blank">+91-6297549389</a></p>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:buildwithroni@gmail.com">buildwithroni@gmail.com</a></p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact-form">
+      <form action="https://wa.me/916297549389" method="get" onsubmit="return sendToWhatsApp(event)">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="service">Service</label>
+          <select id="service" name="service">
+            <option value="Custom Website Development">Custom Website Development</option>
+            <option value="Full-Stack Web Solutions">Full-Stack Web Solutions</option>
+            <option value="E-Commerce Websites">E-Commerce Websites</option>
+            <option value="No-Code / Low-Code Builds">No-Code / Low-Code Builds</option>
+            <option value="Portfolio & Personal Branding Sites">Portfolio & Personal Branding Sites</option>
+            <option value="Website Revamp & Optimization">Website Revamp & Optimization</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="location">Your Location</label>
+          <input type="text" id="location" name="location" placeholder="Your Location" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Contact Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Contact number" required>
+        </div>
+        <button type="submit">Send via WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Right reserved build with Roni</p>
+    <p>Made from love <i class="fas fa-heart"></i></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
