@@ -8,29 +8,39 @@
 }
 
 body {
-  font-family: 'Times New Roman', serif, 'Arial', sans-serif; /* Specified fonts */
+  font-family: 'Times New Roman', serif, 'Arial', sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4; /* Light background */
-  color: #333; /* Dark text */
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
   overflow-x: hidden;
 }
 
 section {
   padding: 60px 20px;
   position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 h2.section-title {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 40px;
-  color: #007bff; /* Light blue accent */
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
 }
 
 /* Header */
 .site-header {
-  background-color: #fff;
-  color: #333;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
   padding: 15px 20px;
   display: flex;
   align-items: center;
@@ -40,14 +50,14 @@ h2.section-title {
   left: 0;
   width: 100%;
   z-index: 1000;
-  border-bottom: 1px solid #ddd;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #333;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
 }
 
 .site-header .logo {
-  border: 1px solid #007bff; /* Light blue outline for logo */
+  border: 1px solid #fff; /* White outline for logo */
   padding: 3px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
 }
 
 .site-header .logo img {
@@ -57,7 +67,7 @@ h2.section-title {
 
 .site-header .title {
   font-size: 1.6rem;
-  color: #007bff;
+  color: #fff;
   font-weight: bold;
   margin-left: 15px;
 }
@@ -69,11 +79,11 @@ h2.section-title {
   right: -250px;
   width: 250px;
   height: 100%;
-  background-color: #fff;
+  background-color: #222; /* Darker background for contrast */
   padding-top: 60px;
   z-index: 1001;
   transition: right 0.3s ease-in-out;
-  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: -2px 0px 5px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
 }
 
 .mobile-nav.active {
@@ -82,12 +92,12 @@ h2.section-title {
 
 .mobile-nav a {
   display: block;
-  color: #333;
+  color: #eee;
   text-decoration: none;
   padding: 12px 20px;
   font-size: 1rem;
   transition: color 0.3s ease;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #333;
 }
 
 .mobile-nav a:last-child {
@@ -95,12 +105,12 @@ h2.section-title {
 }
 
 .mobile-nav a:hover {
-  color: #007bff;
+  color: #fff;
 }
 
 .menu-toggle {
   font-size: 1.5rem;
-  color: #333;
+  color: #fff;
   cursor: pointer;
   background: none;
   border: none;
@@ -125,14 +135,14 @@ h2.section-title {
 
 /* Hero */
 .hero {
-  background: linear-gradient(to right, #e9ecef, #f8f9fa); /* Light gradient */
+  background: linear-gradient(to right, #111, #333); /* Darker gradient */
   text-align: center;
   padding: 100px 20px;
 }
 
 .hero h1 {
   font-size: 2.8rem;
-  color: #007bff;
+  color: #fff;
   margin-bottom: 15px;
 }
 
@@ -140,24 +150,25 @@ h2.section-title {
   font-size: 1rem;
   margin: 20px auto;
   max-width: 700px;
-  color: #555;
+  color: #eee;
   line-height: 1.7;
 }
 
 .hero a {
   display: inline-block;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   padding: 12px 24px;
   text-decoration: none;
   border-radius: 5px;
   font-weight: 500;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   margin-top: 15px;
 }
 
 .hero a:hover {
-  background-color: #0056b3;
+  background-color: #ddd;
+  color: #000;
 }
 
 /* About */
@@ -165,6 +176,7 @@ h2.section-title {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #111; /* Dark background */
 }
 
 .about .about-content {
@@ -182,13 +194,13 @@ h2.section-title {
   height: auto; /* Maintain aspect ratio */
   border-radius: 0; /* No rounded corners for passport style */
   object-fit: cover;
-  border: 2px solid #ddd; /* Border for the photo */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid #eee; /* White border for the photo */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
 }
 
 .about p {
   font-size: 0.9rem;
-  color: #555;
+  color: #eee;
   text-align: center;
   line-height: 1.6;
 }
@@ -213,14 +225,14 @@ h2.section-title {
   justify-content: center;
   gap: 20px;
   padding: 40px 20px;
-  background-color: #f8f9fa; /* Light background */
+  background-color: #222; /* Dark background */
 }
 
 .info-box {
-  background: #fff;
+  background: #333;
   border-radius: 5px;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
   transition: transform 0.3s ease;
   text-align: center;
   max-width: 350px;
@@ -234,23 +246,24 @@ h2.section-title {
 .info-box img {
   height: 40px;
   margin-bottom: 10px;
+  filter: grayscale(100%); /* Ensure icons are black and white */
 }
 
 .info-box h3 {
-  color: #007bff;
+  color: #fff;
   margin-bottom: 10px;
   font-size: 1.3rem;
 }
 
 .info-box p {
-  color: #555;
+  color: #eee;
   font-size: 0.9rem;
   line-height: 1.6;
 }
 
 /* Why Me */
 .why-me {
-  background-color: #e9ecef; /* Light background */
+  background-color: #111; /* Dark background */
   padding: 60px 20px;
 }
 
@@ -265,31 +278,31 @@ h2.section-title {
 }
 
 .why-me ul li {
-  background-color: #fff;
+  background-color: #222; /* Darker list items */
   padding: 15px;
   border-radius: 5px;
   display: flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
 }
 
 .why-me ul li i {
   font-size: 1.2rem;
-  color: #007bff;
+  color: #fff;
   min-width: 25px;
   text-align: center;
 }
 
 .why-me ul li span {
-  color: #555;
+  color: #eee;
   font-size: 0.9rem;
   line-height: 1.6;
 }
 
 /* Services */
 .services {
-  background-color: #f8f9fa; /* Light background */
+  background-color: #222; /* Dark background */
   padding: 60px 20px;
 }
 
@@ -304,25 +317,64 @@ h2.section-title {
 }
 
 .services ul li {
-  background-color: #fff;
+  background-color: #333; /* Darker list items */
   padding: 20px;
   border-radius: 5px;
   font-size: 0.9rem;
-  color: #555;
+  color: #eee;
   line-height: 1.6;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
 }
 
 .services ul li span {
   font-weight: bold;
-  color: #007bff;
+  color: #fff;
   margin-right: 5px;
+}
+
+/* Our Working Model */
+.working-model {
+  background-color: #111; /* Dark background */
+  padding: 60px 20px;
+}
+
+.working-model-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+.working-model .step {
+  background-color: #222; /* Darker step boxes */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+}
+
+.working-model .icon {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.working-model h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.working-model p {
+  color: #eee;
+  font-size: 0.8rem;
 }
 
 /* Carousel Sections (Projects, Portfolio, Testimonials) */
 .carousel-section {
   padding: 60px 20px;
-  background-color: #e9ecef; /* Light background */
+  background-color: #222; /* Dark background */
 }
 
 .carousel {
@@ -352,21 +404,52 @@ h2.section-title {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+  filter: grayscale(100%); /* Black and white images */
+}
+
+/* Projects Specific Styling */
+.project-item {
+  min-width: 300px;
+  background-color: #333; /* Dark project boxes */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+  text-align: center;
+}
+
+.project-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  filter: grayscale(100%); /* Black and white images */
+}
+
+.project-item h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.project-item p {
+  color: #eee;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 /* Testimonials Carousel Specific Styling */
 .carousel .slider .testimonial-item {
   min-width: 320px;
-  background-color: #fff;
+  background-color: #333; /* Dark testimonial boxes */
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
 }
 
 .carousel .slider .testimonial-item p {
   font-style: italic;
-  color: #666;
+  color: #eee;
   margin-bottom: 10px;
   font-size: 0.9rem;
   line-height: 1.6;
@@ -375,13 +458,13 @@ h2.section-title {
 .carousel .slider .testimonial-item cite {
   display: block;
   text-align: right;
-  color: #777;
+  color: #ccc;
   font-size: 0.8rem;
 }
 
 /* Skills Section */
 .skills {
-  background-color: #f8f9fa; /* Light background */
+  background-color: #111; /* Dark background */
   padding: 60px 20px;
 }
 
@@ -395,55 +478,59 @@ h2.section-title {
 }
 
 .skill-box {
-  background-color: #fff;
-  color: #444;
+  background-color: #222; /* Dark skill boxes */
+  color: #eee;
   border-radius: 20px;
   padding: 12px 18px;
   font-size: 0.9rem;
   display: flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .skill-box i {
   font-size: 1rem;
-  color: #007bff;
+  color: #fff;
 }
 
 .skill-box.clicked {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
 }
 
 .skill-box.clicked i {
-  color: #fff;
+  color: #000;
 }
+
+/* style.css */
+
+/* ... previous CSS ... */
 
 /* Reach */
 .reach {
-  background-color: #e9ecef; /* Light background */
+  background-color: #222; /* Dark background */
   padding: 60px 20px;
   text-align: center;
 }
 
 .reach p {
-  color: #555;
+  color: #eee;
   font-size: 0.9rem;
   margin-bottom: 10px;
 }
 
 .reach a {
-  color: #007bff;
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .reach a:hover {
-  color: #0056b3;
+  color: #ddd;
 }
 
 .reach i {
@@ -453,7 +540,7 @@ h2.section-title {
 
 /* Contact Section */
 .contact {
-  background-color: #f8f9fa; /* Light background */
+  background-color: #333; /* Dark background */
   padding: 60px 20px;
 }
 
@@ -461,9 +548,9 @@ h2.section-title {
   max-width: 550px;
   margin: 30px auto 0;
   padding: 30px;
-  background-color: #fff;
+  background-color: #222; /* Darker form background */
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -475,7 +562,7 @@ h2.section-title {
 }
 
 .contact-form label {
-  color: #444;
+  color: #eee;
   margin-bottom: 5px;
   font-size: 0.9rem;
   font-weight: 500;
@@ -485,40 +572,41 @@ h2.section-title {
 .contact-form select {
   padding: 10px;
   border-radius: 3px;
-  border: 1px solid #ddd;
-  background: #f8f9fa;
-  color: #333;
+  border: 1px solid #555;
+  background: #333;
+  color: #eee;
   font-size: 0.9rem;
   outline: none;
 }
 
 .contact-form button {
   padding: 12px 20px;
-  background: #007bff;
+  background: #fff;
   border: none;
   border-radius: 5px;
-  color: #fff;
+  color: #000;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
   font-size: 1rem;
   outline: none;
 }
 
 .contact-form button:hover {
-  background: #0056b3;
+  background: #ddd;
+  color: #000;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 30px 20px;
-  background: #333;
-  color: #eee;
+  background: #000;
+  color: #ccc;
   font-size: 0.8rem;
-  border-top: 1px solid #555;
+  border-top: 1px solid #333;
 }
 
 footer span {
-  color: #007bff;
+  color: #fff;
 }
