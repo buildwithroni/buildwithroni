@@ -1,15 +1,22 @@
-// script.js
-
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById("hamburger");
   const mobileMenu = document.getElementById("mobileMenu");
   const skillBoxes = document.querySelectorAll('.skill-box');
   const carousels = document.querySelectorAll('.carousel.auto-scroll');
+  const sections = document.querySelectorAll('.reveal');
 
   // Toggle mobile menu
   if (menuToggle && mobileMenu) {
     menuToggle.addEventListener("click", function () {
       mobileMenu.classList.toggle("active");
+    });
+
+    // Close mobile menu on outside click
+    document.addEventListener('click', function(event) {
+      const isClickInside = mobileMenu.contains(event.target) || menuToggle.contains(event.target);
+      if (!isClickInside && mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+      }
     });
   }
 
@@ -23,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (targetElement) {
         window.scrollTo({
-          top: targetElement.offsetTop - (document.querySelector('.site-header')?.offsetHeight || 0), // Adjust for fixed header
+          top: targetElement.offsetTop - (document.querySelector('.site-header')?.offsetHeight || 0),
           behavior: "smooth"
         });
         // Close mobile menu after clicking
@@ -78,4 +85,20 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 50); // Adjust interval for speed
     }
   });
+
+  // Scroll reveal animation
+  function revealSection() {
+    sections.forEach(section => {
+      const top = section.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      const revealPoint = 150;
+
+      if (top < windowHeight - revealPoint) {
+        section.classList.add('reveal');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealSection);
+  revealSection(); // Initial call to reveal sections in viewport
 });
